@@ -15,10 +15,13 @@ echo "El total de items: ${#names[*]}"
 
 echo "El último elemento es: ${names[${#names[@]}-1]}"
 
+# Depuración -x
+set -x
 for name in ${names[@]}
 do
     echo "My name is : $name"
 done
+set +x
 
 # Elimina un item
 : 'unset names[1]
